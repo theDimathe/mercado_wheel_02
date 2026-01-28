@@ -70,6 +70,7 @@ place-items: center;
     width: 120%;
     z-index: 5;
     scale: 140%;
+    pointer-events: none;
 }
 
 .wheel-tips img {
@@ -114,25 +115,34 @@ place-items: center;
   width: 90%;
   height: 100%;
   object-fit: contain;
+  position: relative;
+  z-index: 1;
 }
 
 .wheel__labels {
   position: absolute;
   inset: 0;
   display: block;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .wheel__label {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: rotate(calc(var(--i) * 30deg - 90deg)) translateY(-42%)
+  transform: rotate(calc(var(--i) * 30deg - 90deg)) translateY(-175%)
     rotate(calc(-1 * (var(--i) * 30deg - 90deg)));
   transform-origin: center;
   font-weight: 800;
   font-size: clamp(0.95rem, 3.2vw, 1.4rem);
   color: #ffdd6a;
   text-shadow: 0 2px 6px rgba(125, 22, 22, 0.8);
+  text-align: center;
+  width: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .wheel__center {
