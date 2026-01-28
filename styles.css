@@ -16,6 +16,18 @@
   padding: 0;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
 body {
   font-family: "Montserrat", "Arial", sans-serif;
   background: var(--red-dark);
@@ -249,40 +261,33 @@ place-items: center;
 
 .modal__content {
   position: relative;
-  width: min(84vw, 340px);
+   width: min(86vw, 360px);
+  min-height: min(82vh, 680px);
   text-align: center;
   z-index: 1;
   display: grid;
   gap: 1.1rem;
   justify-items: center;
+   padding: 5vh 0 6vh;
 }
 
-.modal__logo {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
+
+
+.modal__logo-image {
+  width: min(62vw, 220px);
+  height: auto;
+  object-fit: contain;
 }
 
-.modal__logo-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #fff, #e0e6ff 40%, #2a2d8d 80%);
-  border: 4px solid #c23136;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
-}
-
-.modal__logo-text {
-  font-weight: 700;
-  text-transform: lowercase;
-  font-size: 1.5rem;
-  line-height: 1;
-  text-align: left;
-}
-
-.modal__logo-text span {
+.modal__bonus-image {
+  width: min(78vw, 320px);
+  max-height: 52vh;
+  height: auto;
+  object-fit: contain;
+  flex: 1;
   display: block;
 }
+
 
 .modal__gift {
   position: relative;
