@@ -388,6 +388,13 @@ place-items: center;
   }
 }
 
+@media (max-width: 390px) {
+  
+.modal__content {
+gap: 5.1rem;
+}
+
+}
 @media (min-width: 768px) {
   .scene {
     justify-content: center;
