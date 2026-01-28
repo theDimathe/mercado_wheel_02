@@ -55,24 +55,25 @@ body {
 }
 
 .wheel-area {
-  position: relative;
-  width: min(86vw, 420px);
-  aspect-ratio: 1 / 1;
-  margin-top: 2vh;
-  z-index: 2;
-  display: grid;
-  place-items: center;
+position: relative;
+width: min(86vw, 420px);
+aspect-ratio: 1 / 1;
+margin-top: 6vh;
+z-index: 2;
+display: grid;
+place-items: center;
 }
 
 .wheel-tips {
-  position: absolute;
-  inset: -18% -14% auto;
-  width: 120%;
-  z-index: 1;
+    position: absolute;
+    inset: -15% -46% auto;
+    width: 120%;
+    z-index: 5;
+    scale: 140%;
 }
 
 .wheel-tips img {
-  width: 100%;
+  width: 160%;
   height: auto;
   display: block;
 }
@@ -84,12 +85,14 @@ body {
   display: grid;
   place-items: center;
   z-index: 2;
+  scale: 120%;
 }
 
 .wheel__border {
   position: absolute;
   inset: 0;
   z-index: 3;
+  scale: 105%;
 }
 
 .wheel__border img {
