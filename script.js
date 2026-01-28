@@ -1,5 +1,5 @@
 const wheelArea = document.querySelector(".wheel-area");
-const wheelImg = wheelArea.querySelector(".wheel__img");
+const wheelSpin = document.getElementById("wheelSpin");
 const center = document.getElementById("wheelCenter");
 const modal = document.getElementById("modal");
 const modalButton = document.getElementById("modalButton");
@@ -29,17 +29,16 @@ const startSpin = () => {
   if (isSpinning) return;
   isSpinning = true;
 
-  const angle = getRotationAngle(wheelImg);
+  const angle = getRotationAngle(wheelSpin);
   currentRotation = angle;
-  wheelImg.style.animation = "none";
-  wheelImg.style.transition = "none";
-  wheelImg.style.transform = `rotate(${currentRotation}deg)`;
+  wheelSpin.style.transition = "none";
+  wheelSpin.style.transform = `rotate(${currentRotation}deg)`;
 
   const targetRotation = currentRotation + spinSettings.fullTurns * 360 + spinSettings.stopAngle;
 
   requestAnimationFrame(() => {
-    wheelImg.style.transition = `transform ${spinSettings.duration}ms cubic-bezier(0.1, 0.8, 0.2, 1)`;
-    wheelImg.style.transform = `rotate(${targetRotation}deg)`;
+    wheelSpin.style.transition = `transform ${spinSettings.duration}ms cubic-bezier(0.1, 0.8, 0.2, 1)`;
+    wheelSpin.style.transform = `rotate(${targetRotation}deg)`;
   });
 
   window.setTimeout(() => {
