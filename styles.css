@@ -190,12 +190,12 @@ position: absolute;
 }
 
 .character__shadow {
-  position: absolute;
-  bottom: -6%;
-  right: 12%;
-  width: 65%;
-  opacity: 0.85;
-  z-index: 0;
+    position: absolute;
+    bottom: -46%;
+    right: -48%;
+    width: 225%;
+    opacity: 0.85;
+    z-index: 0;
 }
 
 .character__shadow img,
