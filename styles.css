@@ -157,6 +157,7 @@ body {
   font-size: clamp(0.9rem, 3.4vw, 1.3rem);
   text-transform: uppercase;
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  display: none;
 }
 
 .wheel__center:focus-visible {
@@ -174,6 +175,7 @@ body {
   border-bottom: 32px solid var(--gold);
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.45));
   z-index: 4;
+  display: none;
 }
 
 .character {
