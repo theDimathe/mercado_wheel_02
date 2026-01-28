@@ -147,7 +147,7 @@ place-items: center;
     left: 41%;
     top: 47%;
     --label-angle: calc(var(--i) * 30deg - 90deg);
-    transform: rotate(var(--label-angle)) translateY(-375%) rotate(90deg);
+    transform: rotate(var(--label-angle)) translateY(-350%) rotate(90deg);
     transform-origin: center;
     font-weight: 800;
     font-size: 1.4rem;
