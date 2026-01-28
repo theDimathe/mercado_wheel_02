@@ -65,25 +65,12 @@
       <div class="modal" id="modal" aria-hidden="true">
         <div class="modal__backdrop"></div>
         <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-          <div class="modal__logo">
-            <div class="modal__logo-icon"></div>
-            <div class="modal__logo-text">
-              <span>mercado</span>
-              <span>casino</span>
-            </div>
-          </div>
-          <div class="modal__gift">
-            <div class="modal__gift-top"></div>
-            <div class="modal__gift-bottom"></div>
-            <div class="modal__gift-ribbon"></div>
-          </div>
-          <div class="modal__badge">
-            <p id="modalTitle">+125 % AL DEPÓSITO</p>
-            <span>DEPÓSITO Y 75 FS</span>
-          </div>
-          <button class="modal__button" type="button" id="modalButton">¡Reclamá tu bono!</button>
-        </div>
-      </div>
+           <img class="modal__logo-image" src="source/logo.png" alt="Mercado Casino" />
+          <h2 class="sr-only" id="modalTitle">Bono especial</h2>
+          <img class="modal__bonus-image" src="source/bono.png" alt="Bono especial" />
+          <button class="modal__button" type="button" id="modalButton" aria-label="Reclamá tu bono">
+            ¡Reclamá tu bono!
+          </button>
     </main>
 
     <script src="script.js"></script>
