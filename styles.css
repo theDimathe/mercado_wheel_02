@@ -182,9 +182,9 @@ place-items: center;
 }
 
 .character {
-position: absolute;
-    right: -82vw;
-    bottom: -633px;
+    position: absolute;
+    right: -94vw;
+    bottom: -623px;
     width: 232vw;
     z-index: 3;
 }
