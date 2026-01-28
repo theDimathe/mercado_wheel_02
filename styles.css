@@ -131,21 +131,21 @@ place-items: center;
 }
 
 .wheel__label {
-    position: absolute;
-    left: 41%;
-    top: 47%;
-    --label-angle: calc(var(--i) * 30deg - 90deg);
-    transform: rotate(var(--label-angle)) translateY(-375%) rotate(90deg);
-    transform-origin: center;
-    font-weight: 800;
-    font-size: 1.4rem;
-    color: #ffdd6a;
-    text-shadow: 0 2px 7px rgb(116 28 28 / 80%);
-    text-align: center;
-    width: 3.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 49%;
+  --label-angle: calc(var(--i) * 30deg - 90deg);
+  transform: rotate(var(--label-angle)) translateY(-615%) rotate(90deg);
+  transform-origin: center;
+  font-weight: 800;
+  font-size: clamp(0.95rem, 3.2vw, 1.4rem);
+  color: #ffdd6a;
+  text-shadow: 0 2px 6px rgba(125, 22, 22, 0.8);
+  text-align: center;
+  width: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .wheel__center {
