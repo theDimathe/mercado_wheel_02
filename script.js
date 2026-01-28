@@ -48,6 +48,7 @@ const startSpin = () => {
   window.setTimeout(() => {
     modal.classList.add("is-visible");
     modal.setAttribute("aria-hidden", "false");
+    isSpinning = false;
   }, spinSettings.duration + 200);
 };
 
@@ -57,6 +58,13 @@ center.addEventListener("keydown", (event) => {
     event.preventDefault();
     startSpin();
   }
+});
+
+document.addEventListener("click", (event) => {
+  if (event.target.closest(".modal__button")) {
+    return;
+  }
+  startSpin();
 });
 
 modalButton.addEventListener("click", () => {
