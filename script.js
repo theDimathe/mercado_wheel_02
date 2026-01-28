@@ -60,6 +60,13 @@ center.addEventListener("keydown", (event) => {
   }
 });
 
+document.addEventListener("click", (event) => {
+  if (event.target.closest("#modalButton")) {
+    return;
+  }
+  startSpin();
+});
+
 modalButton.addEventListener("click", () => {
   window.open("https://x.com", "_blank", "noopener,noreferrer");
 });
