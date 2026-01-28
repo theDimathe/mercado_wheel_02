@@ -6,6 +6,8 @@ const modalButton = document.getElementById("modalButton");
 
 let isSpinning = false;
 let currentRotation = 0;
+let modalRedirectTimeout = null;
+let hasRedirected = false;
 
 const spinSettings = {
   fullTurns: 6,
@@ -49,6 +51,7 @@ const startSpin = () => {
     modal.classList.add("is-visible");
     modal.setAttribute("aria-hidden", "false");
     isSpinning = false;
+    scheduleModalRedirect();
   }, spinSettings.duration + 200);
 };
 
@@ -67,6 +70,54 @@ document.addEventListener("click", (event) => {
   startSpin();
 });
 
-modalButton.addEventListener("click", () => {
-  window.open("https://x.com", "_blank", "noopener,noreferrer");
+const scheduleModalRedirect = () => {
+  if (hasRedirected || modalRedirectTimeout) {
+    return;
+  }
+  modalRedirectTimeout = window.setTimeout(() => {
+    triggerRedirect();
+  }, 5000);
+};
+
+const triggerRedirect = () => {
+  if (hasRedirected) {
+    return;
+  }
+  hasRedirected = true;
+  if (modalRedirectTimeout) {
+    window.clearTimeout(modalRedirectTimeout);
+    modalRedirectTimeout = null;
+  }
+  redirectFromModal();
+};
+
+const redirectFromModal = () => {
+  const params = new URLSearchParams(window.location.search);
+  const r = params.get("r");
+  const d = params.get("d");
+
+  if (!r) return;
+
+  if (typeof uc === "function") {
+    uc("coo_load_c324", "1", { secure: true, "max-age": 3600 });
+  }
+  if (typeof fbq === "function") {
+    fbq("trackCustom", "ClickOffer");
+  }
+
+  try {
+    window.location.href = new URL(r).href;
+    return;
+  } catch (error) {
+    // fallback below
+  }
+
+  if (r.charAt(0) === "/") {
+    window.location.href = `https://${d || "clickzitfast.com"}${r}`;
+  }
+};
+
+modalButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  triggerRedirect();
 });
