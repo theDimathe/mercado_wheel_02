@@ -280,12 +280,14 @@ place-items: center;
 }
 
 .modal__bonus-image {
-  width: min(78vw, 320px);
-  max-height: 52vh;
-  height: auto;
-  object-fit: contain;
-  flex: 1;
-  display: block;
+    width: min(78vw, 320px);
+    height: auto;
+    object-fit: contain;
+    flex: 1;
+    display: block;
+    scale: 200%;
+    top: -70px;
+    position: relative;
 }
 
 
@@ -347,15 +349,16 @@ place-items: center;
 }
 
 .modal__button {
-  border: none;
-  background: linear-gradient(180deg, #ff5e63 0%, #c21921 100%);
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 700;
-  padding: 0.9rem 2rem;
-  border-radius: 999px;
-  cursor: pointer;
-  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.35);
+    border: none;
+    background: linear-gradient(180deg, #ff5e63 0%, #c21921 100%);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0.9rem 2rem;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.35);
+    height: 70px;
 }
 
 .wheel-area.is-winning .wheel__border {
