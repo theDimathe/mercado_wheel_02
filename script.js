@@ -48,6 +48,7 @@ const startSpin = () => {
   window.setTimeout(() => {
     modal.classList.add("is-visible");
     modal.setAttribute("aria-hidden", "false");
+    isSpinning = false;
   }, spinSettings.duration + 200);
 };
 

@@ -109,6 +109,9 @@ place-items: center;
   place-items: center;
   z-index: 2;
   transition: transform 4.8s var(--ease-out);
+  transform: rotate(0deg);
+  transform-origin: 50% 50%;
+  will-change: transform;
 }
 
 .wheel__bg {
@@ -130,9 +133,9 @@ place-items: center;
 .wheel__label {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: rotate(calc(var(--i) * 30deg - 90deg)) translateY(-175%)
-    rotate(calc(-1 * (var(--i) * 30deg - 90deg)));
+  top: 49%;
+  --label-angle: calc(var(--i) * 30deg - 90deg);
+  transform: rotate(var(--label-angle)) translateY(-615%) rotate(90deg);
   transform-origin: center;
   font-weight: 800;
   font-size: clamp(0.95rem, 3.2vw, 1.4rem);
