@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wheel Landing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="scene">
+      <div class="scene__bg" aria-hidden="true"></div>
+
+      <header class="header">
+        <h1 class="title">
+          <span class="title__light">PRUEBA</span>
+          <span class="title__accent">TU SUERTE</span>
+        </h1>
+        <div class="logo">
+          <img src="source/logo.png" alt="Farkas Casino" />
+          <!--
+          <span class="logo__shine" aria-hidden="true"></span>
+          -->
+        </div>
+      </header>
+
+      <div class="character" aria-hidden="true">
+        <img src="source/char.png" alt="" />
+      </div>
+
+      <div class="wheel-area">
+        <div class="wheel-glow" aria-hidden="true">
+          <img src="source/wh_shine.png" alt="" />
+        </div>
+        <div class="wheel" id="wheel">
+          <img class="wheel__img" src="source/wheel_wt.png" alt="Колесо удачи" />
+          <div class="wheel__center" id="wheelCenter" role="button" aria-label="Запустить колесо" tabindex="0">
+            <img src="source/c_wh.png" alt="" />
+          </div>
+        </div>
+        <div class="wheel-pointer" aria-hidden="true">
+          <img src="source/pointer.png" alt="" />
+        </div>
+
+        <div class="coin coin--back coin--one">
+          <img src="source/c_back_1.png" alt="" />
+        </div>
+        <div class="coin coin--back coin--two">
+          <img src="source/c_back_2.png" alt="" />
+        </div>
+        <div class="coin coin--front coin--three">
+          <img src="source/c_front_1.png" alt="" />
+        </div>
+      </div>
+
+      <div class="modal" id="modal" aria-hidden="true">
+        <div class="modal__backdrop"></div>
+        <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+          <div class="modal__coin modal__coin--left">
+            <img src="source/c_back_1.png" alt="" />
+          </div>
+          <div class="modal__coin modal__coin--right">
+            <img src="source/c_back_2.png" alt="" />
+          </div>
+          <div class="modal__frame">
+            <img src="source/mod_w.png" alt="" />
+          </div>
+          <div class="modal__body">
+            <h2 id="modalTitle">¡Ganaste!</h2>
+            <p>+500% hasta $5.000.000</p>
+            <button class="modal__button" type="button" id="modalButton">¡Toma tu bono!</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
