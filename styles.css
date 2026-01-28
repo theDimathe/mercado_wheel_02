@@ -182,11 +182,11 @@ place-items: center;
 }
 
 .character {
-  position: absolute;
-  right: -6vw;
-  bottom: 0;
-  width: min(68vw, 360px);
-  z-index: 1;
+position: absolute;
+    right: -82vw;
+    bottom: -633px;
+    width: 232vw;
+    z-index: 3;
 }
 
 .character__shadow {
