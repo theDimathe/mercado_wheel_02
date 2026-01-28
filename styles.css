@@ -185,13 +185,13 @@ place-items: center;
     position: absolute;
     right: -94vw;
     bottom: -623px;
-    width: 232vw;
+    width: 222vw;
     z-index: 3;
 }
 
 .character__shadow {
     position: absolute;
-    bottom: -46%;
+    bottom: -66%;
     right: -48%;
     width: 225%;
     opacity: 0.85;
