@@ -140,7 +140,7 @@ place-items: center;
     font-weight: 800;
     font-size: 1.4rem;
     color: #ffdd6a;
-    text-shadow: 0 2px 7px rgb(116 28 28 / 80%);
+    text-shadow: 0 4px 5px rgb(14 13 13 / 30%), -1px 1px 0px rgb(172 0 0), 1px -1px 0px rgb(172 0 0), -1px -1px 0px rgb(172 0 0), 1px 1px 0px rgb(172 0 0);
     text-align: center;
     width: 3.6rem;
     display: flex;
